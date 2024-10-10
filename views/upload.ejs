@@ -1,0 +1,27 @@
+<!-- views/upload.ejs -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>動画アップロード</title>
+  <link rel="stylesheet" href="/public/css/common.css">
+  <link rel="stylesheet" href="/public/css/play.css">
+</head>
+<body>
+  <h1>動画をアップロード</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="videoFile" accept="video/mp4" required>
+    <button type="submit">アップロード</button>
+  </form>
+
+  <h2>アップロード済みファイル一覧</h2>
+  <ul>
+    <% files.forEach(file => { %>
+      <% if (file.toLowerCase().endsWith('.mp4')) { %>
+        <li><a href="/play/<%= encodeURIComponent(file) %>"><%= file %></a></li>
+      <% } %>
+    <% }); %>
+  </ul>
+
+</body>
+</html>

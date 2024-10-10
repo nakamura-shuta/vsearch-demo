@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動画再生</title>
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" href="/public/css/play.css">
+</head>
+<body>
+    <h1><%= fileName %> を再生中</h1>
+    <video id="videoPlayer" controls width="640" height="360" data-filename="<%= fileName %>">
+        <source src="/media/<%= encodeURIComponent(fileName) %>" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div>
+        <input type="text" id="searchInput" placeholder="検索キーワードを入力">
+        <button onclick="search()">検索</button>
+    </div>
+    <div id="searchResults"></div>
+
+    <% if (metadata) { %>
+        <h2>文字起こし結果</h2>
+        <div class="transcript-text" style="display: none;"><%= metadata.results.transcripts[0].transcript %></div>
+        <div><%= metadata.results.transcripts[0].transcript %></div>
+    <% } else { %>
+        <p>文字起こしがまだ完了していません。</p>
+    <% } %>
+
+    <script src="/public/js/search.js"></script>
+</body>
+</html>

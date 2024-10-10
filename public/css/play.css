@@ -1,0 +1,50 @@
+#videoPlayer {
+    max-width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#searchInput {
+    padding: 10px;
+    width: calc(100% - 120px);
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#searchResults {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.search-result {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-result:hover {
+    background-color: #f0f0f0;
+}
+
+.timestamp {
+    font-weight: bold;
+    color: #666;
+}
+
+mark {
+    background-color: yellow;
+    padding: 2px;
+}
+
+.transcript-text {
+    background-color: white;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}

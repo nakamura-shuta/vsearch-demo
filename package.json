@@ -1,0 +1,31 @@
+{
+  "name": "vsearch-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "process-transcripts": "node scripts/processExistingTranscripts.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.665.0",
+    "@aws-sdk/client-transcribe": "^3.665.0",
+    "@electric-sql/pglite": "^0.2.10",
+    "@fastify/multipart": "^9.0.1",
+    "@fastify/static": "^8.0.1",
+    "@fastify/view": "^10.0.1",
+    "@types/lowdb": "^1.0.15",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "fastify": "^5.0.0",
+    "fs-extra": "^11.2.0",
+    "gpt-3-encoder": "^1.1.4",
+    "lowdb": "^1.0.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.7.0",
+    "string-similarity": "^4.0.4"
+  }
+}
